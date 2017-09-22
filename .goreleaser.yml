@@ -1,0 +1,15 @@
+builds:
+  - binary: diskotek
+    goos:
+      - windows
+      - darwin
+      - linux
+    goarch:
+      - amd64
+archive:
+  format: tar.gz
+  files:
+    - LICENSE
+    - README.md
+checksum:
+  name_template: "{{ .ProjectName }}_checksums.txt"
