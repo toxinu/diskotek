@@ -43,24 +43,44 @@ const tpl = `
 
 	  .albums { display: none; }
 			
+	  a[name="top"] {
+		top: -5px;
+		position: absolute;
+	  }
+
 	  #top-link {
 	    font-size: 150%;
-		position: fixed; /* Fixed/sticky position */
-		bottom: 9px; /* Place the button at the bottom of the page */
-		right: 15px; /* Place the button 30px from the right */
-		z-index: 99; /* Make sure it does not overlap */
-		border: none; /* Remove borders */
-		outline: none; /* Remove outline */
-		background-color: #D3D3D3; /* Set a background color */
-		color: black; /* Text color */
-		cursor: pointer; /* Add a mouse pointer on hover */
-		padding: 14px 20px 14px 20px; /* Some padding */
-		border-radius: 5px; /* Rounded corners */
-		text-decoration: none;
+		position: fixed;
+		bottom: 17px;
+		right: 15px;
+		z-index: 99;
+		border: none;
+		outline: none;
+		background-color: #D3D3D3;
+		color: black;
+		cursor: pointer;
+		border-radius: 5px;
 		opacity: 0.8;
-      }
-	  #top-link:hover {
+		height: 40px;
+		width: 40px;
+		text-align: center;
+		margin: 0;
+	  }
+
+	  #top-link a:hover {
 		text-decoration: none;
+	  }
+
+	  #top-link a {
+		display: block;
+		height: 100%;
+		width: 100%;
+		text-decoration: none;
+		padding: 7px;
+	  }
+
+	  #top-link a:visited {
+		color: black;
 	  }
   </style>
   </head>
@@ -75,7 +95,7 @@ const tpl = `
         {{end}}</ul>
       </li>
 		{{end}}</ul>
-	<a id="top-link" href="#top">&uarr;</a>
+	<div id="top-link"><a href="#top">&uarr;</a></div>
   <script>
     function slugify(text) {
       return text.toString().toLowerCase()
