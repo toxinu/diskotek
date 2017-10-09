@@ -41,11 +41,32 @@ const tpl = `
 
       #artists li a:hover:not(.header) { background-color: #eee; }
 
-      .albums { display: none; }
-    </style>
+	  .albums { display: none; }
+			
+	  #top-link {
+	    font-size: 150%;
+		position: fixed; /* Fixed/sticky position */
+		bottom: 9px; /* Place the button at the bottom of the page */
+		right: 15px; /* Place the button 30px from the right */
+		z-index: 99; /* Make sure it does not overlap */
+		border: none; /* Remove borders */
+		outline: none; /* Remove outline */
+		background-color: #D3D3D3; /* Set a background color */
+		color: black; /* Text color */
+		cursor: pointer; /* Add a mouse pointer on hover */
+		padding: 14px 20px 14px 20px; /* Some padding */
+		border-radius: 5px; /* Rounded corners */
+		text-decoration: none;
+		opacity: 0.8;
+      }
+	  #top-link:hover {
+		text-decoration: none;
+	  }
+  </style>
   </head>
-  <body>
-   	<input type="text" id="search-input" onkeyup="search()" placeholder="Search for artists..">
+	<body>
+	<a name="top"></a>
+	<input type="text" id="search-input" onkeyup="search()" placeholder="Search for artists..">
     <ul id="artists">{{range .Artists}}
       <li class="artist-item">
         <a class="artist-name">{{.Name}}</a>
@@ -53,7 +74,8 @@ const tpl = `
           <li><div class="album-name">{{ . }}</div></li>
         {{end}}</ul>
       </li>
-    {{end}}</ul>
+		{{end}}</ul>
+	<a id="top-link" href="#top">&uarr;</a>
   <script>
     function slugify(text) {
       return text.toString().toLowerCase()
@@ -81,7 +103,7 @@ const tpl = `
             li[i].style.display = "none";
         }
       }
-    }
+		}
   </script>
 </body>
 </html>`
@@ -125,7 +147,7 @@ func visit(path string, f os.FileInfo, err error) error {
 	artist = strings.Trim(metaData.Artist(), " ")
 
 	if artist == "" {
-		artist = "---"
+		return nil
 	}
 
 	album = strings.Trim(metaData.Album(), " ")
