@@ -3,8 +3,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Diskotek</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diskotek</title>
     <style>
       * { box-sizing: border-box; font-family: monospace; }
 
@@ -23,11 +23,32 @@
 
       #artists li a:hover:not(.header) { background-color: #eee; }
 
-      .albums { display: none; }
-    </style>
+	  .albums { display: none; }
+			
+	  #top-link {
+	    font-size: 150%;
+		position: fixed;  
+		bottom: 9px;  
+		right: 15px;  
+		z-index: 99;  
+		border: none;  
+		outline: none;  
+		background-color: #D3D3D3;  
+		color: black;  
+		cursor: pointer;  
+		padding: 14px 20px 14px 20px;  
+		border-radius: 5px;  
+		text-decoration: none;
+		opacity: 0.8;
+      }
+	  #top-link:hover {
+		text-decoration: none;
+	  }
+  </style>
   </head>
-  <body>
-   	<input type="text" id="search-input" onkeyup="search()" placeholder="Search for artists..">
+	<body>
+	<a name="top"></a>
+	<input type="text" id="search-input" onkeyup="search()" placeholder="Search for artists..">
     <ul id="artists">
       <li class="artist-item">
         <a class="artist-name">13 &amp; God</a>
@@ -35,29 +56,25 @@
           <li><div class="album-name">13 &amp; God</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">500won Project</a>
         <ul class="albums">
           <li><div class="album-name">Um Han</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">65daysofstatic</a>
         <ul class="albums">
           <li><div class="album-name">A Road Movie</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Aphex Twin</a>
         <ul class="albums">
           <li><div class="album-name">AFX &amp; LFO Split</div></li>
-        
-          <li><div class="album-name">Analord 1</div></li>
-        
-          <li><div class="album-name">Analord 11</div></li>
         
           <li><div class="album-name">26 Mixes for Cash (CD1)</div></li>
         
@@ -70,39 +87,28 @@
           <li><div class="album-name">Windowlicker promoCDS���������</div></li>
         </ul>
       </li>
-    
-      <li class="artist-item">
-        <a class="artist-name">AFX</a>
-        <ul class="albums">
-          <li><div class="album-name">Analogue Bubblebath 5</div></li>
-        
-          <li><div class="album-name">Analord 10</div></li>
-        
-          <li><div class="album-name">orphaned deejay selek 2006-2008</div></li>
-        </ul>
-      </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">ABRA</a>
         <ul class="albums">
           <li><div class="album-name">BLQ VELVET</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Action Bronson</a>
         <ul class="albums">
           <li><div class="album-name">Rare Chandeliers Extended Version</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Actress</a>
         <ul class="albums">
           <li><div class="album-name">Hazyville</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Aesop Rock</a>
         <ul class="albums">
@@ -111,163 +117,154 @@
           <li><div class="album-name">Unreleased��������������������</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Aidan Baker</a>
         <ul class="albums">
           <li><div class="album-name">---</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Aidan Baker &amp; Tim Hecker</a>
         <ul class="albums">
           <li><div class="album-name">Fantasma Parastasie</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Air</a>
         <ul class="albums">
           <li><div class="album-name">10000 Hz Legend</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Airhead</a>
         <ul class="albums">
           <li><div class="album-name">Pyramid Lake / Black Ink</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Alcoholic Faith Mission</a>
         <ul class="albums">
           <li><div class="album-name">421 Wythe Avenue</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Alias</a>
         <ul class="albums">
           <li><div class="album-name">Collected Remixes</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">All India Radio</a>
         <ul class="albums">
           <li><div class="album-name">A Low High</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Alt-J</a>
         <ul class="albums">
           <li><div class="album-name">An Awesome Wave</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Alterlabel</a>
         <ul class="albums">
           <li><div class="album-name">DRIXA aerobic</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ambalance</a>
         <ul class="albums">
           <li><div class="album-name">Discard [EP]</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Amiina</a>
         <ul class="albums">
           <li><div class="album-name">Animamina</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Amon Tobin</a>
         <ul class="albums">
           <li><div class="album-name">Bricolage</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Andy McKee</a>
         <ul class="albums">
           <li><div class="album-name">Art of Motion</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Andy McKee &amp; Don Ross</a>
         <ul class="albums">
           <li><div class="album-name">---</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Animal Collective</a>
         <ul class="albums">
           <li><div class="album-name">Animal Crack Box</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Antoine Dufour</a>
         <ul class="albums">
           <li><div class="album-name">Existence</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">tahnees18@yahoo.co.uk</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Apparat</a>
         <ul class="albums">
           <li><div class="album-name">Duplex</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Arcade Fire</a>
         <ul class="albums">
           <li><div class="album-name">Arcade Fire</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Archive</a>
         <ul class="albums">
           <li><div class="album-name">Again SP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ariel Pink&#39;s Haunted Graffiti</a>
         <ul class="albums">
           <li><div class="album-name">Underground</div></li>
         
-          <li><div class="album-name">Lover Boy</div></li>
-        
           <li><div class="album-name">(2006) Ariel Friedman EP</div></li>
         </ul>
       </li>
-    
-      <li class="artist-item">
-        <a class="artist-name">---</a>
-        <ul class="albums">
-          <li><div class="album-name">---</div></li>
-        </ul>
-      </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ariel Pink</a>
         <ul class="albums">
@@ -276,111 +273,111 @@
           <li><div class="album-name">Pom Pom�����������������������</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Arrested Development</a>
         <ul class="albums">
           <li><div class="album-name">Zingalamaduni</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Asa &amp; Stumbleine</a>
         <ul class="albums">
           <li><div class="album-name">Your Secret EP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Assassin</a>
         <ul class="albums">
           <li><div class="album-name">Assassin - Single</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Atoms For Peace</a>
         <ul class="albums">
           <li><div class="album-name">Amok</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Aucan</a>
         <ul class="albums">
           <li><div class="album-name">Aucan</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Autechre</a>
         <ul class="albums">
           <li><div class="album-name">Exai</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Automine</a>
         <ul class="albums">
           <li><div class="album-name">Padington Band (EP)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Avey Tare</a>
         <ul class="albums">
           <li><div class="album-name">Down There</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Avey Tare&#39;s Slasher Flicks</a>
         <ul class="albums">
           <li><div class="album-name">Enter the Slasher House</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">B. Dolan</a>
         <ul class="albums">
           <li><div class="album-name">Fallen House, Sunken City</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">BADBADNOTGOOD</a>
         <ul class="albums">
           <li><div class="album-name">BBNG</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">BADBADNOTGOOD and Ghostface Killah</a>
         <ul class="albums">
           <li><div class="album-name">Sour Soul</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">BADBADNOTGOOD and Ghostface Killah featuring Danny Brown</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">BADBADNOTGOOD and Ghostface Killah featuring Elzhi</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">BADBADNOTGOOD and Ghostface Killah featuring Tree</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">BADBADNOTGOOD and Ghostface Killah featuring Doom</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">BEAK&gt;</a>
         <ul class="albums">
@@ -389,89 +386,89 @@
           <li><div class="album-name">BEAK&gt;&gt;</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">&lt;KAEB</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bandshell</a>
         <ul class="albums">
           <li><div class="album-name">Pulped Out... (Mixes)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Baths</a>
         <ul class="albums">
           <li><div class="album-name">Cerulean</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Battles</a>
         <ul class="albums">
           <li><div class="album-name">Gloss Drop</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Beach House</a>
         <ul class="albums">
           <li><div class="album-name">Depression Cherry</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Beastie Boys</a>
         <ul class="albums">
           <li><div class="album-name">Hello Nasty</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ben Frost</a>
         <ul class="albums">
           <li><div class="album-name">A U R O R A</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Berry Weight</a>
         <ul class="albums">
           <li><div class="album-name">Music For Imaginary Movies</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bianca Casady &amp; The C.i.A</a>
         <ul class="albums">
           <li><div class="album-name">Oscar Hocks</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bibio</a>
         <ul class="albums">
           <li><div class="album-name">Ambivalence Avenue</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Biffty &amp; DJ Weedim</a>
         <ul class="albums">
           <li><div class="album-name">La Réincarnation Du Turn Up, Vol.2</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Björk</a>
         <ul class="albums">
           <li><div class="album-name">Army Of Life (Remixes And Covers)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mos Def</a>
         <ul class="albums">
@@ -482,14 +479,14 @@
           <li><div class="album-name">Black On Both Sides</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Blakroc</a>
         <ul class="albums">
           <li><div class="album-name">Blakroc</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Blizzard</a>
         <ul class="albums">
@@ -498,21 +495,21 @@
           <li><div class="album-name">World of Warcraft Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Russell Brower, Jason Heyes, Glenn Stafford &amp; Tracy Bush</a>
         <ul class="albums">
           <li><div class="album-name">World Of Warcraft : Warlords Of Dreanor Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Blockhead</a>
         <ul class="albums">
           <li><div class="album-name">Downtown Science</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Blonde Redhead</a>
         <ul class="albums">
@@ -521,200 +518,200 @@
           <li><div class="album-name">Remixes</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ryan Amon</a>
         <ul class="albums">
           <li><div class="album-name">Bloodborne Original Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Tsukasa Saitoh</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Cris Velasco</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Yuka Kitamura</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Michael Wandmacher</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Nobuyoshi Suzuki</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Boards of Canada</a>
         <ul class="albums">
           <li><div class="album-name">Aquarius</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bob Log III</a>
         <ul class="albums">
           <li><div class="album-name">Log Bomb</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bob Marley &amp; The Wailers</a>
         <ul class="albums">
           <li><div class="album-name">Legend</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bogdan Raczynski</a>
         <ul class="albums">
           <li><div class="album-name">Alright</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bon Iver</a>
         <ul class="albums">
           <li><div class="album-name">22, A Million</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bonobo</a>
         <ul class="albums">
           <li><div class="album-name">Animal Magic</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Brokenchord</a>
         <ul class="albums">
           <li><div class="album-name">SoundCloud</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Buck 65</a>
         <ul class="albums">
           <li><div class="album-name">Language Arts</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Burial</a>
         <ul class="albums">
           <li><div class="album-name">Box Of Dub - Dubstep &amp; Future Dub [6x12&#34; LP - SJRLP161]</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Burial / Four Tet &amp; Thom Yorke</a>
         <ul class="albums">
           <li><div class="album-name">TEXT010</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Busdriver</a>
         <ul class="albums">
           <li><div class="album-name">Cosmic Cleavage</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">C418</a>
         <ul class="albums">
           <li><div class="album-name">Bushes and Marshmallows</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Caballero</a>
         <ul class="albums">
           <li><div class="album-name">Laisse Nous Faire Volume 1</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Caballero &amp; JeanJass &amp; La Seize</a>
         <ul class="albums">
           <li><div class="album-name">Le pont de la reine</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Caballero &amp; JeanJass</a>
         <ul class="albums">
           <li><div class="album-name">Double Hélice</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Can</a>
         <ul class="albums">
           <li><div class="album-name">Future Days</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Captain Beefheart</a>
         <ul class="albums">
           <li><div class="album-name">Trout Mask Replica</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Captain Murphy</a>
         <ul class="albums">
           <li><div class="album-name">Bonus&#43;&#43;&#43;&#43;</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Caspian</a>
         <ul class="albums">
           <li><div class="album-name">Dust and Disquiet</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Cat Power</a>
         <ul class="albums">
           <li><div class="album-name">Dear Sir</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Caustic Window</a>
         <ul class="albums">
           <li><div class="album-name">Caustic Window LP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ceephax Acid Crew</a>
         <ul class="albums">
           <li><div class="album-name">United Acid Emirates</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Charles Bradley</a>
         <ul class="albums">
           <li><div class="album-name">Changes</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Chris Clark</a>
         <ul class="albums">
@@ -723,28 +720,28 @@
           <li><div class="album-name">Empty The Bones Of You</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Clark</a>
         <ul class="albums">
           <li><div class="album-name">Death Peak</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Cocorosie</a>
         <ul class="albums">
           <li><div class="album-name">Coconuts, Plenty of Junk Food</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Django Unchained</a>
         <ul class="albums">
           <li><div class="album-name">Django Unchained OST</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Death From Above 1979</a>
         <ul class="albums">
@@ -753,42 +750,42 @@
           <li><div class="album-name">Heads Up</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Connan Mockasin</a>
         <ul class="albums">
           <li><div class="album-name">Forever Dolphin Love</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Converge</a>
         <ul class="albums">
           <li><div class="album-name">All We Love We Leave Behind</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Cyesm</a>
         <ul class="albums">
           <li><div class="album-name">Blackmail</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">DIIV</a>
         <ul class="albums">
           <li><div class="album-name">Oshin</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">DJ Krush</a>
         <ul class="albums">
           <li><div class="album-name">A Whim / 89.9 Megamix / Yeah</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">DJ Shadow</a>
         <ul class="albums">
@@ -797,49 +794,49 @@
           <li><div class="album-name">Bombay The Hardway</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">DJ Shadow &amp; Cut Chemist</a>
         <ul class="albums">
           <li><div class="album-name">Brainfreeze</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">DJ Signify</a>
         <ul class="albums">
           <li><div class="album-name">Of Cities</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Daft Punk</a>
         <ul class="albums">
           <li><div class="album-name">Daft Club</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Daisuke Tanabe</a>
         <ul class="albums">
           <li><div class="album-name">B F R</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Dak</a>
         <ul class="albums">
           <li><div class="album-name">Youstandit / Left Record</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Damien Rice</a>
         <ul class="albums">
           <li><div class="album-name">9</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ford &amp; Lopatin</a>
         <ul class="albums">
@@ -850,136 +847,136 @@
           <li><div class="album-name">Emergency Room</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Games</a>
         <ul class="albums">
           <li><div class="album-name">Heaven Can Wait Mixtape, Volume I</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Michael Franks</a>
         <ul class="albums">
           <li><div class="album-name">Spend The Night With</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Cool Notes</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Alan Shearer</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Delano Smith</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mayday</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ticky</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Manhattans</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Dopplereffekt</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Billy Griffin</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Octave</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Enya</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Loose Ends</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bam Bam</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Colonel Abrams</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Krush</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Herbie Hancock</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Roger Troutman</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Joyce Sims</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Atlantic Starr</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">52nd Street</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mai Tai</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mobb Deep</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Everything Everything</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">CFCF</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Oneohtrix Point Never</a>
         <ul class="albums">
@@ -988,65 +985,65 @@
           <li><div class="album-name">Split</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Andrew Kirschner</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Slow Listener</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Caboladies</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">KGB MAN</a>
         <ul class="albums">
           <li><div class="album-name">KGB Nights / Blue Drive</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Outer Space</a>
         <ul class="albums">
           <li><div class="album-name">Split</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Prehistoric Blackout</a>
         <ul class="albums">
           <li><div class="album-name">Synth Night</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">No Fun Acid</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Keith Fullerton Whitman</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Tomutonttu</a>
         <ul class="albums">
           <li><div class="album-name">Split</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Rene Hell</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Astronaut</a>
         <ul class="albums">
@@ -1057,134 +1054,134 @@
           <li><div class="album-name">Early Peril</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">1994</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Family Battle Snake</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Bee Mask</a>
         <ul class="albums">
           <li><div class="album-name">The World Is Transformed And All The Heavens Sing For Joy! / Will They Remember F-Zero?</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Borden, Ferraro, Godin, Halo &amp; Lopatin</a>
         <ul class="albums">
           <li><div class="album-name">FRKWYS Vol. 7</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Chuck Person</a>
         <ul class="albums">
           <li><div class="album-name">Chuck Person&#39;s Eccojams Vol. 1</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Dania Shapes</a>
         <ul class="albums">
           <li><div class="album-name">Soundsystem Pastoral</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Axolotl</a>
         <ul class="albums">
           <li><div class="album-name">Split</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Infinity Window</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Treetops</a>
         <ul class="albums">
           <li><div class="album-name">Tour Split</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Skyramps</a>
         <ul class="albums">
           <li><div class="album-name">Days Of Thunder</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Tim Hecker &amp; Daniel Lopatin</a>
         <ul class="albums">
           <li><div class="album-name">Instrumental Tourist</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Total System Point Never</a>
         <ul class="albums">
           <li><div class="album-name">Power In That Which Compels You</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Danny Baranowsky</a>
         <ul class="albums">
           <li><div class="album-name">Super Meat Boy! Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Danny Brown</a>
         <ul class="albums">
           <li><div class="album-name">Atrocity Exhibition</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Daughter</a>
         <ul class="albums">
           <li><div class="album-name">His Young Heart EP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">DEAKIN</a>
         <ul class="albums">
           <li><div class="album-name">SLEEP CYCLE</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Death Grips</a>
         <ul class="albums">
           <li><div class="album-name">Exmilitary</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Death Proof</a>
         <ul class="albums">
           <li><div class="album-name">Death Proof Soundtracks</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Diplo</a>
         <ul class="albums">
           <li><div class="album-name">Florida</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Martina Topley Bird</a>
         <ul class="albums">
@@ -1193,231 +1190,231 @@
           <li><div class="album-name">Quixotic</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Don Caballero</a>
         <ul class="albums">
           <li><div class="album-name">American Don</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Douglas Dare</a>
         <ul class="albums">
           <li><div class="album-name">Aforger</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Duke Ellington</a>
         <ul class="albums">
           <li><div class="album-name">Money Jungle (with Charlie Mingus)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Dälek</a>
         <ul class="albums">
           <li><div class="album-name">Abandoned Language</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Earl Sweatshirt</a>
         <ul class="albums">
           <li><div class="album-name">Doris</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ef</a>
         <ul class="albums">
           <li><div class="album-name">Give Me Beauty... Or Give Me Death!</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Electric Electric</a>
         <ul class="albums">
           <li><div class="album-name">Sad Cities Handclappers</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Emancipator</a>
         <ul class="albums">
           <li><div class="album-name">Soon It Will Be Cold Enough</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Eminem</a>
         <ul class="albums">
           <li><div class="album-name">The Marshall Mathers</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Enablers</a>
         <ul class="albums">
           <li><div class="album-name">Blown Realms and Stalled Explosions</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Erik Mongrain</a>
         <ul class="albums">
           <li><div class="album-name">Equilibrium</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Esmerine</a>
         <ul class="albums">
           <li><div class="album-name">Lost Voices</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Explosions In The Sky</a>
         <ul class="albums">
           <li><div class="album-name">All Of A Sudden I Miss Everyone</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Fis</a>
         <ul class="albums">
           <li><div class="album-name">The Blue Quicksand Is Going Now</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">FKA twigs</a>
         <ul class="albums">
           <li><div class="album-name">EP1</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Figub Brazlevič</a>
         <ul class="albums">
           <li><div class="album-name">Figub Brazlevič - Oldschool Future</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Figures</a>
         <ul class="albums">
           <li><div class="album-name">Cycle</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Fink</a>
         <ul class="albums">
           <li><div class="album-name">Distance And Time</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Flamingods</a>
         <ul class="albums">
           <li><div class="album-name">Majesty</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Fleet Foxes</a>
         <ul class="albums">
           <li><div class="album-name">Fleet Foxes</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Fleetwood Mac</a>
         <ul class="albums">
           <li><div class="album-name">Rumours</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Flobots</a>
         <ul class="albums">
           <li><div class="album-name">Fight With Tools</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Tomáš Dvořák</a>
         <ul class="albums">
           <li><div class="album-name">Samorost 2</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Fly Pan Am</a>
         <ul class="albums">
           <li><div class="album-name">aMAZEzine! #4 (Lost In The House)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Flying Lotus</a>
         <ul class="albums">
           <li><div class="album-name">Brainfeeder Podcast</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Fordamage</a>
         <ul class="albums">
           <li><div class="album-name">Belgian Tango</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Four Tet</a>
         <ul class="albums">
           <li><div class="album-name">0181</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Orgasmic &amp; Fuzati</a>
         <ul class="albums">
           <li><div class="album-name">Grand Siècle</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Fuzz</a>
         <ul class="albums">
           <li><div class="album-name">Fuzz</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ghostface Killah</a>
         <ul class="albums">
           <li><div class="album-name">Twelve Reasons To Die: The Brown Tape</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Giraffes? Giraffes!</a>
         <ul class="albums">
           <li><div class="album-name">More Skin With Milk Mouth</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Godspeed You! Black Emperor</a>
         <ul class="albums">
           <li><div class="album-name">Allelujah! Don&#39;t Bend! Ascend!</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Gonjasufi</a>
         <ul class="albums">
@@ -1426,12 +1423,12 @@
           <li><div class="album-name">The Caliph&#39;s Tea Party</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ras G</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sumach</a>
         <ul class="albums">
@@ -1442,7 +1439,7 @@
           <li><div class="album-name">Jungl Bulit</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Gorillaz</a>
         <ul class="albums">
@@ -1451,21 +1448,21 @@
           <li><div class="album-name">Plastic Beach</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Grails</a>
         <ul class="albums">
           <li><div class="album-name">Black Tar Prophecies Vol&#39;s 1, 2, &amp; 3</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Greenwood Sharps</a>
         <ul class="albums">
           <li><div class="album-name">Things Familiar</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Grimes</a>
         <ul class="albums">
@@ -1474,110 +1471,110 @@
           <li><div class="album-name">Halfaxa</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">d&#39;Eon</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Grizzly Bear</a>
         <ul class="albums">
           <li><div class="album-name">Friend EP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Holy Fuck</a>
         <ul class="albums">
           <li><div class="album-name">&#43; Ghost</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Howard Shore</a>
         <ul class="albums">
           <li><div class="album-name">The Lord Of The Rings - The Fellowship Of The Ring</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">IAM</a>
         <ul class="albums">
           <li><div class="album-name">L&#39;école Du Micro D&#39;argent</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Isao Takahata</a>
         <ul class="albums">
           <li><div class="album-name">Kaguya-hime no Monogatari Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ital Tek</a>
         <ul class="albums">
           <li><div class="album-name">Terminator 2</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">JJ DOOM</a>
         <ul class="albums">
           <li><div class="album-name">Key to the Kuffs</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Jason Molina</a>
         <ul class="albums">
           <li><div class="album-name">Autumn Bird Songs</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">JeanJass</a>
         <ul class="albums">
           <li><div class="album-name">Goldman</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Jel</a>
         <ul class="albums">
           <li><div class="album-name">Soft Money</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Jeremy Soule</a>
         <ul class="albums">
           <li><div class="album-name">The Elder Scrolls III: Morrowind</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Jethro Tull</a>
         <ul class="albums">
           <li><div class="album-name">The Very Best Of</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Jetone</a>
         <ul class="albums">
           <li><div class="album-name">Autumnumonia</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Jimi Hendrix</a>
         <ul class="albums">
           <li><div class="album-name">Are You Experienced</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Joanna Newsom</a>
         <ul class="albums">
@@ -1586,63 +1583,63 @@
           <li><div class="album-name">Have One On Me����������������</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Joe Beats</a>
         <ul class="albums">
           <li><div class="album-name">Diverse Recourse</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Joe Hisaishi</a>
         <ul class="albums">
           <li><div class="album-name">Kaguya-hime no Monogatari Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Joey Bada$$</a>
         <ul class="albums">
           <li><div class="album-name">ALL-AMERIKKKAN BADA$$</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">John Murphy</a>
         <ul class="albums">
           <li><div class="album-name">28 Days Later</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">John Williams</a>
         <ul class="albums">
           <li><div class="album-name">Star Wars I - The Phantom Menace OST</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Jonny Greenwood</a>
         <ul class="albums">
           <li><div class="album-name">There Will Be Blood</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Jose Gonzalez</a>
         <ul class="albums">
           <li><div class="album-name">In Our Nature</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Joy division</a>
         <ul class="albums">
           <li><div class="album-name">Unknown pleasures</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">KMD</a>
         <ul class="albums">
@@ -1651,340 +1648,340 @@
           <li><div class="album-name">Mr Hood ����������������������</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Karma to Burn</a>
         <ul class="albums">
           <li><div class="album-name">Almost Heathen</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Kazumi Nikaido</a>
         <ul class="albums">
           <li><div class="album-name">Kaguya-hime no Monogatari Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Keaton Henson</a>
         <ul class="albums">
           <li><div class="album-name">Dear...</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Kendrick Lamar</a>
         <ul class="albums">
           <li><div class="album-name">DAMN.</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Kid Dakota</a>
         <ul class="albums">
           <li><div class="album-name">So Pretty</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Kid Koala</a>
         <ul class="albums">
           <li><div class="album-name">2 bit Blues x 6 bit Blues</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Kid Loco</a>
         <ul class="albums">
           <li><div class="album-name">Party Animals &amp; Disco Biscuits</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Kill Bill</a>
         <ul class="albums">
           <li><div class="album-name">Volume One</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">King Buzzo</a>
         <ul class="albums">
           <li><div class="album-name">This Machine Kills Artists</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">King Crimson</a>
         <ul class="albums">
           <li><div class="album-name">In The Court Of The Crimson King (UK Pink Island)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">King Gizzard &amp; The Lizard Wizard</a>
         <ul class="albums">
           <li><div class="album-name">12 Bar Bruise</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Le Klub Des 7</a>
         <ul class="albums">
           <li><div class="album-name">La Classe De Musique</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Klub des Loosers</a>
         <ul class="albums">
           <li><div class="album-name">La fin de l&#39;espèce</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">L&#39;Or Du Commun</a>
         <ul class="albums">
           <li><div class="album-name">L&#39;Odyssée</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">LFO</a>
         <ul class="albums">
           <li><div class="album-name">Advance</div></li>
         
-          <li><div class="album-name">Frequencies</div></li>
+          <li><div class="album-name">Frequencies�������������������</div></li>
         
           <li><div class="album-name">Sheath</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Lambent</a>
         <ul class="albums">
           <li><div class="album-name">Smoothness Extract (Deep Night at Ishigaki)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Lapalux</a>
         <ul class="albums">
           <li><div class="album-name">Some Other Time</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Avril &amp; Monthaye</a>
         <ul class="albums">
           <li><div class="album-name">Lastman OST</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Late of the Pier</a>
         <ul class="albums">
           <li><div class="album-name">Fantasy Black Channel</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Laura Veirs</a>
         <ul class="albums">
           <li><div class="album-name">Carbon Glacier</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Led Zeppelin</a>
         <ul class="albums">
           <li><div class="album-name">Mothership</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Liars</a>
         <ul class="albums">
           <li><div class="album-name">Drum&#39;s Not Dead</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Lilacs/Champagne</a>
         <ul class="albums">
           <li><div class="album-name">Lilacs &amp; Champagne</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Lomepal</a>
         <ul class="albums">
           <li><div class="album-name">FLIP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Lorenzo</a>
         <ul class="albums">
           <li><div class="album-name">Empereur Du Sale</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Lorn</a>
         <ul class="albums">
           <li><div class="album-name">Ask the Dust</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Lukid</a>
         <ul class="albums">
           <li><div class="album-name">Chord (WEB)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">MF Doom</a>
         <ul class="albums">
           <li><div class="album-name">1-22-04</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mac DeMarco</a>
         <ul class="albums">
           <li><div class="album-name">2</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Maps &amp; Atlases</a>
         <ul class="albums">
           <li><div class="album-name">Perch Patchwork</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Massive Attack</a>
         <ul class="albums">
           <li><div class="album-name">100th Window</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Massive Attack vs Burial</a>
         <ul class="albums">
           <li><div class="album-name">Four Walls/Paradise Circus</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Matmos</a>
         <ul class="albums">
           <li><div class="album-name">The West</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Max Richter</a>
         <ul class="albums">
           <li><div class="album-name">Recomposed by Max Richter: Vivaldi - The Four Seasons</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Max van Richter</a>
         <ul class="albums">
           <li><div class="album-name">Resurrection</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Melvins</a>
         <ul class="albums">
           <li><div class="album-name">Houdini</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Metallica</a>
         <ul class="albums">
           <li><div class="album-name">Garage, Inc.</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Michael Jackson</a>
         <ul class="albums">
           <li><div class="album-name">Greatest Hits</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mike &amp; The Melvins</a>
         <ul class="albums">
           <li><div class="album-name">Three Men and a Baby</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mixmaster Mike</a>
         <ul class="albums">
           <li><div class="album-name">Bombay 2: Electric Vindaloo</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Moderat</a>
         <ul class="albums">
           <li><div class="album-name">II (Tour Edition)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mogwai</a>
         <ul class="albums">
           <li><div class="album-name">4 Satin</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mono</a>
         <ul class="albums">
           <li><div class="album-name">For My Parents</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Monster Island Czars</a>
         <ul class="albums">
           <li><div class="album-name">Escape from Monsta Island</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Morcheeba</a>
         <ul class="albums">
           <li><div class="album-name">Big Calm</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Music For Programming</a>
         <ul class="albums">
           <li><div class="album-name">---</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Múm</a>
         <ul class="albums">
           <li><div class="album-name">Go Go Smear the Poison Ivy</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Nathan Fake�������������������</a>
         <ul class="albums">
@@ -1993,504 +1990,504 @@
           <li><div class="album-name">Hard Islands</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Neurosis</a>
         <ul class="albums">
           <li><div class="album-name">A Sun That Never Sets</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Neutral Milk Hotel</a>
         <ul class="albums">
           <li><div class="album-name">In the Aeroplane Over the Sea</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Nick Cave And The Bad Seeds</a>
         <ul class="albums">
           <li><div class="album-name">Push the Sky Away</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Nirvana</a>
         <ul class="albums">
           <li><div class="album-name">Bleach</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Nocow</a>
         <ul class="albums">
           <li><div class="album-name">Lost In Taiga</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Non-Prophets</a>
         <ul class="albums">
           <li><div class="album-name">Hope</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Nujabes</a>
         <ul class="albums">
           <li><div class="album-name">Ain&#39;t No Mystery (Remix)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Of Porcelain</a>
         <ul class="albums">
           <li><div class="album-name">A Southern Summer&#39;s Breeze</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">One Little Plane</a>
         <ul class="albums">
           <li><div class="album-name">Into the Trees</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ought</a>
         <ul class="albums">
           <li><div class="album-name">More Than Any Other Day</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">PJ Harvey</a>
         <ul class="albums">
           <li><div class="album-name">Hen&#39;s Teeth</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Panda Bear</a>
         <ul class="albums">
           <li><div class="album-name">Live At ZDB, Lisbon, Portugal, September 2004</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Pantera</a>
         <ul class="albums">
           <li><div class="album-name">Cowboys From Hell (20th Anniversary Edition)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Papier Tigre</a>
         <ul class="albums">
           <li><div class="album-name">Papier Tigre</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Parmesano</a>
         <ul class="albums">
           <li><div class="album-name">Parmesano! EP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Pelican</a>
         <ul class="albums">
           <li><div class="album-name">Ataraxia/Taraxis</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Phoenix</a>
         <ul class="albums">
           <li><div class="album-name">Alphabetical</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Pink Floyd</a>
         <ul class="albums">
           <li><div class="album-name">A Saucerful Of Secrets</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Plaid</a>
         <ul class="albums">
           <li><div class="album-name">Booc</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Pleq</a>
         <ul class="albums">
           <li><div class="album-name">Ballet Mechanic</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Pneu</a>
         <ul class="albums">
           <li><div class="album-name">Highway To Health</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Polygon Window</a>
         <ul class="albums">
           <li><div class="album-name">Surfing On Sine Waves</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Pomplamoose</a>
         <ul class="albums">
           <li><div class="album-name">Pomplamoose Covers</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Portishead</a>
         <ul class="albums">
           <li><div class="album-name">Dummy</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Prefuse 73</a>
         <ul class="albums">
           <li><div class="album-name">Interregnums</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Primero</a>
         <ul class="albums">
           <li><div class="album-name">Scénarios</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Professor Kliq</a>
         <ul class="albums">
           <li><div class="album-name">Community Service II</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Pulp Fiction</a>
         <ul class="albums">
           <li><div class="album-name">Pulp Fiction Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Quasimoto</a>
         <ul class="albums">
           <li><div class="album-name">The Further Adventures of Lord Quas</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">RJD2</a>
         <ul class="albums">
           <li><div class="album-name">Deadringer</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Radical Face</a>
         <ul class="albums">
           <li><div class="album-name">Family Tree - The Roots</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Radiohead</a>
         <ul class="albums">
           <li><div class="album-name">A Moon Shaped Pool</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Rage Against the machine</a>
         <ul class="albums">
           <li><div class="album-name">Evil Empire</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ratatat</a>
         <ul class="albums">
           <li><div class="album-name">9 Beats</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Refused</a>
         <ul class="albums">
           <li><div class="album-name">Freedom</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Rival Consoles</a>
         <ul class="albums">
           <li><div class="album-name">Howl</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Rob Zombie</a>
         <ul class="albums">
           <li><div class="album-name">Past, Present &amp; Future  [Best Of]</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Roméo Elvis</a>
         <ul class="albums">
           <li><div class="album-name">BXL c&#39;est devenu la jungle</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Roméo Elvis &amp; Le Motel</a>
         <ul class="albums">
           <li><div class="album-name">Morale 2</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Room 204</a>
         <ul class="albums">
           <li><div class="album-name">Balloons</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ropoporose</a>
         <ul class="albums">
           <li><div class="album-name">ELEPHANT LOVE</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Russell Shaw</a>
         <ul class="albums">
           <li><div class="album-name">Fable</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Russian Circles</a>
         <ul class="albums">
           <li><div class="album-name">Empros</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">SHXCXCHCXSH</a>
         <ul class="albums">
           <li><div class="album-name">SsSsSsSsSsSsSsSsSsSsSsSsSsSsSs</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sage Francis</a>
         <ul class="albums">
           <li><div class="album-name">A Healthy Distrust</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Saul Williams</a>
         <ul class="albums">
           <li><div class="album-name">Amethyst Rock Star</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">School Of Emotional Engineering</a>
         <ul class="albums">
           <li><div class="album-name">School Of Emotional Engineering</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Scott Kelly</a>
         <ul class="albums">
           <li><div class="album-name">Spirit Bound Flesh</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sebastien Tellier</a>
         <ul class="albums">
           <li><div class="album-name">Various</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Serge Gainsbourg</a>
         <ul class="albums">
           <li><div class="album-name">Histoire De Melody Nelson</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Set Fire To Flames</a>
         <ul class="albums">
           <li><div class="album-name">Disc 1: Telegraphs In Negative</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Shlohmo</a>
         <ul class="albums">
           <li><div class="album-name">Bad Vibes</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sigur Ros</a>
         <ul class="albums">
           <li><div class="album-name">( )</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Slayer</a>
         <ul class="albums">
           <li><div class="album-name">South Of Heaven</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sleeping in Gethsemane</a>
         <ul class="albums">
           <li><div class="album-name">Burrows</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Slint</a>
         <ul class="albums">
           <li><div class="album-name">Slint</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Slowdive</a>
         <ul class="albums">
           <li><div class="album-name">Slowdive</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Smn and C418</a>
         <ul class="albums">
           <li><div class="album-name">A Cobblers Tee Thug</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sneaker Pimps</a>
         <ul class="albums">
           <li><div class="album-name">Becoming X</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Snowman</a>
         <ul class="albums">
           <li><div class="album-name">Absence</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Solar Fields</a>
         <ul class="albums">
           <li><div class="album-name">Blue Moon Station</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Solar Quest</a>
         <ul class="albums">
           <li><div class="album-name">Orgship</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sole</a>
         <ul class="albums">
           <li><div class="album-name">Bottle Of Humans</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sole and the Skyrider Band</a>
         <ul class="albums">
           <li><div class="album-name">Sole and the Skyrider Band</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Son Lux</a>
         <ul class="albums">
           <li><div class="album-name">At War With Walls &amp; Mazes</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Squarepusher</a>
         <ul class="albums">
           <li><div class="album-name">Big Loada</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Steinvord</a>
         <ul class="albums">
           <li><div class="album-name">---</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Steve Von Till</a>
         <ul class="albums">
           <li><div class="album-name">A Grave Is A Grim Horse</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Stumbleine</a>
         <ul class="albums">
           <li><div class="album-name">All for your smile</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Subtle</a>
         <ul class="albums">
           <li><div class="album-name">A New White</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sun Kil Moon</a>
         <ul class="albums">
           <li><div class="album-name">Benji</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Suuns</a>
         <ul class="albums">
@@ -2499,192 +2496,190 @@
           <li><div class="album-name">Hold/Still</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Suuns and Jerusalem In My Heart</a>
         <ul class="albums">
           <li><div class="album-name">Suuns and Jerusalem In My Heart</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Svarte Greiner</a>
         <ul class="albums">
           <li><div class="album-name">Knive</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Sébastien Schuller</a>
         <ul class="albums">
           <li><div class="album-name">Happiness</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">TTC</a>
         <ul class="albums">
           <li><div class="album-name">Bâtards Sensibles</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Talk Talk</a>
         <ul class="albums">
           <li><div class="album-name">Laughing Stock</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Teebs</a>
         <ul class="albums">
           <li><div class="album-name">Ardour</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Black Angels</a>
         <ul class="albums">
           <li><div class="album-name">Death Song</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Black Keys</a>
         <ul class="albums">
           <li><div class="album-name">Attack &amp; Release</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Chemical Brothers</a>
         <ul class="albums">
           <li><div class="album-name">Come With Us</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Gaslamp Killer</a>
         <ul class="albums">
           <li><div class="album-name">Death Gate</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Redneck Manifesto</a>
         <ul class="albums">
           <li><div class="album-name">Friendship</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Rolling Stones</a>
         <ul class="albums">
           <li><div class="album-name">Aftermath [US]</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Tallest Man on Earth</a>
         <ul class="albums">
           <li><div class="album-name">Shallow Grave</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">The Tuss</a>
         <ul class="albums">
           <li><div class="album-name">Confederation Trough EP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Marcin Przybyłowicz</a>
         <ul class="albums">
           <li><div class="album-name">The Witcher 3: Wild Hunt - Official Soundtrack</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Mikolai Stroinski</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Percival &amp; Marcin Przybyłowicz</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Percival</a>
         <ul class="albums"></ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Thee Oh Sees</a>
         <ul class="albums">
           <li><div class="album-name">A Weird Exits</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">A Silver Mt. Zion</a>
         <ul class="albums">
           <li><div class="album-name">13 Blues For Thirteen Moons</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Themselves</a>
         <ul class="albums">
           <li><div class="album-name">CrownsDown</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">This Will Destroy You</a>
         <ul class="albums">
           <li><div class="album-name">This Will Destroy You</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Thom Yorke</a>
         <ul class="albums">
           <li><div class="album-name">Spitting Feathers [EP]</div></li>
-        
-          <li><div class="album-name">Twist / Stuck Together</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Thriftworks</a>
         <ul class="albums">
           <li><div class="album-name">Rainmaker</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Tim Hecker</a>
         <ul class="albums">
           <li><div class="album-name">Airport Symphony</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Torus</a>
         <ul class="albums">
           <li><div class="album-name">Torus EP</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Tricky</a>
         <ul class="albums">
           <li><div class="album-name">A Ruff Guide</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ty Segall</a>
         <ul class="albums">
@@ -2693,140 +2688,141 @@
           <li><div class="album-name">Sleeper</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ty Segall Band</a>
         <ul class="albums">
           <li><div class="album-name">Slaughterhouse</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Tyler, The Creator</a>
         <ul class="albums">
           <li><div class="album-name">Bastard</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Ugly Heroes</a>
         <ul class="albums">
           <li><div class="album-name">Ugly Heroes</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Valgeir Sigurðsson</a>
         <ul class="albums">
           <li><div class="album-name">Draumalandið</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Vangelis</a>
         <ul class="albums">
           <li><div class="album-name">Blade Runner</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Venetian Snares</a>
         <ul class="albums">
           <li><div class="album-name">My Love Is A Bulldozer</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Warpaint</a>
         <ul class="albums">
           <li><div class="album-name">The Fool</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Wax Tailor</a>
         <ul class="albums">
           <li><div class="album-name">Hope &amp; Sorrow</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Why?</a>
         <ul class="albums">
           <li><div class="album-name">Alopecia</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Wu-Tang Clan</a>
         <ul class="albums">
           <li><div class="album-name">Enter The Wu-Tang (36 Chambers)</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Xiu Xiu</a>
         <ul class="albums">
           <li><div class="album-name">A Promise</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Year Of No Light</a>
         <ul class="albums">
           <li><div class="album-name">Ausserwelt</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Yndi Halda</a>
         <ul class="albums">
           <li><div class="album-name">Enjoy Eternal Bliss</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Yppah</a>
         <ul class="albums">
           <li><div class="album-name">Eighty One</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">Zambla</a>
         <ul class="albums">
           <li><div class="album-name">Sous Le Manteau Featuring Zambla</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">cLOUDDEAD</a>
         <ul class="albums">
           <li><div class="album-name">Ten</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">patten</a>
         <ul class="albums">
           <li><div class="album-name">ESTOILE NAIANT</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">µ-Ziq</a>
         <ul class="albums">
           <li><div class="album-name">Aberystwyth Marine</div></li>
         </ul>
       </li>
-    
+		
       <li class="artist-item">
         <a class="artist-name">ÖfÖ Am</a>
         <ul class="albums">
           <li><div class="album-name">ÖfÖ Am</div></li>
         </ul>
       </li>
-    </ul>
+		</ul>
+	<a id="top-link" href="#top">&uarr;</a>
   <script>
     function slugify(text) {
       return text.toString().toLowerCase()
@@ -2854,7 +2850,7 @@
             li[i].style.display = "none";
         }
       }
-    }
+		}
   </script>
 </body>
 </html>
