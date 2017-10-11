@@ -2,6 +2,8 @@ image: alpine:latest
 
 pages:
   stage: deploy
+  script:
+    - yes
   artifacts:
     paths:
       - .
