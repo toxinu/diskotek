@@ -42,7 +42,7 @@ const tpl = `
       #artists li a:hover:not(.header) { background-color: #eee; }
 
 	  .albums { display: none; }
-			
+
 	  a[name="top"] {
 		top: -5px;
 		position: absolute;
@@ -225,7 +225,7 @@ func generateHTML() error {
 
 	artists := []Artist{}
 
-	artistRows, _ := db.Query("SELECT id, name FROM artist")
+	artistRows, _ := db.Query("SELECT id, name FROM artist ORDER BY LOWER(name)")
 	var (
 		artistID   int64
 		artistName string
